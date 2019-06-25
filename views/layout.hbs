@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/addon/dialog/dialog.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/codemirror.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://use.fontawesome.com/d5baa3626f.js"></script>
+    <!--Codemirror Theme--->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/theme/monokai.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/theme/blackboard.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #ff4949 !important;">
+      <a class="navbar-brand" href="/">LetsCode</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{#if user}}
+          <li class="dropdown">
+            <a href="#" 
+            class="dropdown-toggle" 
+            data-toggle="dropdown" 
+            role="button" 
+            aria-haspopup="true" 
+            aria-expanded="false">{{user.name}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="nav-link" href="/logout" style="color: #333333">Logout</a>
+              </li>
+            </ul>
+          </li>
+          {{else}}
+          <li>
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+    </nav>
+    <br />
+    <!-- Begin page content -->
+    <main role="main" class="flex-shrink-0">
+      <div class="container">
+        {{{body}}}
+      </div>
+    </main>
+    <footer class="footer mt-5 py-3">
+      <div class="container">
+        <span class="text-muted">Developed by <a href="https://thubamamba.com" target="_blank">Thuba Mamba.</a></span>
+      </div>
+    </footer>
+  </body>
+</html>

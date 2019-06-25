@@ -1,0 +1,25 @@
+<form class="form-signin" method="post">
+    <h2 class="form-signin-heading text-center">Register Your New Account</h2>
+    <br />
+
+    <input type="text" name="name" class="form-control" placeholder="Your Name" required autofocus>
+    <br />
+    <input type="email" name="email" class="form-control" placeholder="Your Email" required autofocus>
+    <br />
+    <input type="password" name="password" class="form-control" placeholder="Your Password" required>
+    <br />
+    <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+    <br />
+    <!-- For Form Validation: Shows Errors -->
+    {{#each errorMessages}}
+        <div class="alert alert-danger">
+            {{this.msg}}
+        </div>
+    {{/each}}
+    <button type="submit" class="btn btn-lg btn-primary btn btn-block">Register Account</button>
+    <br />
+    <h4 class="text-center">OR</h4>
+    <br />
+    <a href="/auth/facebook" class="btn btn-lg btn-success btn-block">Facebook Sign Up</a>
+
+</form>

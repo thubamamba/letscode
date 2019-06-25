@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<!--Intro Video-->
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="1067" height="667" src="https://www.youtube.com/embed/YO8vH-OsWVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+{{#if user}}
+    <a href="/createTask" class="btn btn-primary">Create New Task</a>
+{{/if}}
