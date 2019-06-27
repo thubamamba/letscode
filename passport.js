@@ -39,7 +39,7 @@ passport.use(new LocalStrategy({
 passport.use(new FacebookStrategy({
         clientID: '596622934193520',
         clientSecret: '4ab33b9e92bac74c19cd8322c208df15',
-        callbackURL: 'http://localhost:3000/auth/facebook/callback',
+        callbackURL: 'https://secure-crag-92332.herokuapp.com/auth/facebook/callback',
         profileFields: ['id', 'displayName', 'email']
     }, 
     function(token, refreshToken, profile, done) {
