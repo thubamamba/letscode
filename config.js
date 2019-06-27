@@ -12,6 +12,6 @@ module.exports = {
     //dbConnstring: 'mongodb://127.0.0.1:27017/letscode',
 
     //mLab DB - AWS
-    dbConnstring: 'mongodb://<thubz>:<Lungithuba94>@ds243317.mlab.com:43317/letscode',
+    dbConnstring: 'mongodb://thubz:Lungithuba94@ds243317.mlab.com:43317/letscode',
     sessionKey: 'WolaLetsCode'
 }
